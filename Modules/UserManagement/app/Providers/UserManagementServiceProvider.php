@@ -1,0 +1,54 @@
+<?php
+
+namespace Modules\UserManagement\Providers;
+
+use Nwidart\Modules\Support\ModuleServiceProvider;
+use Illuminate\Console\Scheduling\Schedule;
+
+class UserManagementServiceProvider extends ModuleServiceProvider
+{
+    /**
+     * The name of the module.
+     */
+    protected string $name = 'UserManagement';
+
+    /**
+     * The lowercase version of the module name.
+     */
+    protected string $nameLower = 'usermanagement';
+
+    /**
+     * Command classes to register.
+     *
+     * @var string[]
+     */
+    // protected array $commands = [];
+
+    /**
+     * Provider classes to register.
+     *
+     * @var string[]
+     */
+    protected array $providers = [
+        EventServiceProvider::class,
+        RouteServiceProvider::class,
+    ];
+
+    /**
+     * Health indicators to register with nwidart/laravel-actuator.
+     * Each one is registered as "module:usermanagement:{key}".
+     *
+     * @var array<string, class-string|array{0: class-string, 1?: array<string, mixed>}>
+     */
+    // protected array $healthIndicators = [];
+
+    /**
+     * Define module schedules.
+     * 
+     * @param $schedule
+     */
+    // protected function configureSchedules(Schedule $schedule): void
+    // {
+    //     $schedule->command('inspire')->hourly();
+    // }
+}
